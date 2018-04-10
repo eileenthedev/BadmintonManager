@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BadmintonManager</string>
+    <string name="lbName">Name</string>
+    <string name="txtName">Input Player Name</string>
+    <string name="lbLevel">Level</string>
+    <string name="lbGender">Gender</string>
+    <string name="txtGender">Gender</string>
+</resources>
