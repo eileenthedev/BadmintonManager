@@ -32,25 +32,24 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="0dp"
-        android:layout_height="19dp"
+        android:layout_width="115dp"
+        android:layout_height="24dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="68dp"
         android:text="@string/lbLevel"
-        app:layout_constraintEnd_toStartOf="@+id/seekBar"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtSbProgress"
+        app:layout_constraintEnd_toStartOf="@+id/sbLevel"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lbName" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <SeekBar
-        android:id="@+id/seekBar"
-        android:layout_width="214dp"
-        android:layout_height="16dp"
+        android:id="@+id/sbLevel"
+        android:layout_width="187dp"
+        android:layout_height="29dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="56dp"
         android:max="@integer/config_intLevel"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txtSbProgress"
         app:layout_constraintTop_toBottomOf="@+id/txtName" />
 
     <TextView
@@ -60,18 +59,50 @@
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:text="@string/lbGender"
-        app:layout_constraintBaseline_toBaselineOf="@+id/switch1"
-        app:layout_constraintEnd_toStartOf="@+id/switch1"
+        app:layout_constraintBaseline_toBaselineOf="@+id/swGender"
+        app:layout_constraintEnd_toStartOf="@+id/swGender"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Switch
-        android:id="@+id/switch1"
+        android:id="@+id/swGender"
         android:layout_width="210dp"
         android:layout_height="28dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="56dp"
         android:text="Switch"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+        app:layout_constraintTop_toBottomOf="@+id/sbLevel" />
+
+    <TextView
+        android:id="@+id/txtSbProgress"
+        android:layout_width="24dp"
+        android:layout_height="23dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="56dp"
+        android:text="0"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
 
 </android.support.constraint.ConstraintLayout>
