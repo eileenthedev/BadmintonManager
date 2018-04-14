@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:id="@+id/nav_add_player"
-        android:title="Add New Player"
-        android:icon="@mipmap/ic_person_add_black_24dp"></item>
+    <group>
+        <item android:id="@+id/nav_add_player"
+            android:title="Add New Player"
+            android:icon="@mipmap/ic_person_add_black_24dp"></item>
 
-    <item android:id="@+id/nav_get_player_list"
-        android:title="Get Player List"
-        android:icon="@mipmap/ic_list_black_24dp"></item>
+        <item android:id="@+id/nav_get_player_list"
+            android:title="Get Player List"
+            android:icon="@mipmap/ic_list_black_24dp"></item>
+    </group>
 
 </menu>
