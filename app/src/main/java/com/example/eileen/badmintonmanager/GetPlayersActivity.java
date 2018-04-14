@@ -1,7 +1,10 @@
 package com.example.eileen.badmintonmanager;
 
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -19,10 +22,16 @@ public class GetPlayersActivity extends AppCompatActivity {
     TextView txtSbProgress;
     Button btnAddPlayer;
 
+    private DrawerLayout mDrawerLayout;
+    private ActionBarDrawerToggle mToggle;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_get_players);
+
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
+        mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
 
         sbLevel = (SeekBar) findViewById(R.id.sbLevel);
         txtSbProgress = (TextView) findViewById(R.id.txtSbProgress);
@@ -35,6 +44,12 @@ public class GetPlayersActivity extends AppCompatActivity {
     }
 
     private void setOnLoadListeners(){
+
+        mDrawerLayout.addDrawerListener(mToggle);
+        mToggle.syncState();
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         //Seek Bar for Level
         sbLevel.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
@@ -76,9 +91,13 @@ public class GetPlayersActivity extends AppCompatActivity {
             }
         } );
 
-
-
     }
 
-
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(mToggle.onOptionsItemSelected(item)){
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }
