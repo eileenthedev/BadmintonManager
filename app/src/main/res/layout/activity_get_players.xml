@@ -23,6 +23,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginStart="16dp"
             android:text="@string/lbName"
+            android:textSize="18dp"
             app:layout_constraintBaseline_toBaselineOf="@+id/txtName"
             app:layout_constraintEnd_toStartOf="@+id/txtName"
             app:layout_constraintHorizontal_bias="0.0"
@@ -47,6 +48,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginStart="16dp"
             android:text="@string/lbLevel"
+            android:textSize="18dp"
             app:layout_constraintBaseline_toBaselineOf="@+id/txtSbProgress"
             app:layout_constraintEnd_toStartOf="@+id/sbLevel"
             app:layout_constraintHorizontal_bias="0.0"
@@ -54,7 +56,7 @@
 
         <SeekBar
             android:id="@+id/sbLevel"
-            android:layout_width="187dp"
+            android:layout_width="174dp"
             android:layout_height="29dp"
             android:layout_marginEnd="8dp"
             android:layout_marginTop="60dp"
@@ -69,6 +71,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginStart="16dp"
             android:text="@string/lbGender"
+            android:textSize="18dp"
             app:layout_constraintBaseline_toBaselineOf="@+id/swGender"
             app:layout_constraintEnd_toStartOf="@+id/swGender"
             app:layout_constraintHorizontal_bias="0.0"
@@ -78,10 +81,11 @@
             android:id="@+id/swGender"
             android:layout_width="210dp"
             android:layout_height="28dp"
-            android:layout_marginEnd="4dp"
-            android:layout_marginTop="64dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="60dp"
             android:text="Female"
-            android:textAlignment="viewEnd"
+            android:textAlignment="textStart"
+            android:textSize="18dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/sbLevel"
             tools:text="@string/lbGenderMale" />
@@ -90,10 +94,11 @@
             android:id="@+id/txtSbProgress"
             android:layout_width="24dp"
             android:layout_height="23dp"
-            android:layout_marginEnd="4dp"
-            android:layout_marginTop="56dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="60dp"
             android:text="0"
             android:textAlignment="center"
+            android:textSize="18dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtName" />
 
@@ -130,12 +135,13 @@
 
     </android.support.constraint.ConstraintLayout>
 
-        <android.support.design.widget.NavigationView
+    <android.support.design.widget.NavigationView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             app:menu="@menu/navigation_menu"
             android:layout_gravity="start"
-            app:headerLayout="@layout/navigation_header">
+            app:headerLayout="@layout/navigation_header"
+            android:id="@+id/nav_view">
 
     </android.support.design.widget.NavigationView>
 
