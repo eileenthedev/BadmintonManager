@@ -11,6 +11,7 @@ import android.widget.CompoundButton;
 import android.widget.SeekBar;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.support.v7.widget.Toolbar;
 
 import BadmintonManagerDAL.BadmintonManagerDbHelper;
 
@@ -24,6 +25,7 @@ public class GetPlayersActivity extends AppCompatActivity {
 
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
+    private Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,8 @@ public class GetPlayersActivity extends AppCompatActivity {
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
         mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
+        mToolbar = (Toolbar) findViewById(R.id.nav_action);
+        setSupportActionBar(mToolbar);
 
         sbLevel = (SeekBar) findViewById(R.id.sbLevel);
         txtSbProgress = (TextView) findViewById(R.id.txtSbProgress);
@@ -48,7 +52,7 @@ public class GetPlayersActivity extends AppCompatActivity {
         mDrawerLayout.addDrawerListener(mToggle);
         mToggle.syncState();
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //Seek Bar for Level
         sbLevel.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {

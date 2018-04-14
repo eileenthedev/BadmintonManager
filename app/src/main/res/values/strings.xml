@@ -11,4 +11,5 @@
     <string name="title_activity_list_player">List Player Activity</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
+    <string name="lbNavigation">Navigation</string>
 </resources>
