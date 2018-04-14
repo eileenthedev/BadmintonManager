@@ -2,6 +2,7 @@ package com.example.eileen.badmintonmanager;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.CompoundButton;
 import android.widget.SeekBar;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -39,5 +40,18 @@ public class GetPlayersActivity extends AppCompatActivity {
 
             }
         });
+
+        swGender.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    swGender.setText(R.string.lbGenderMale);
+                }
+                else{
+                    swGender.setText(R.string.lbGenderFemale);
+                }
+            }
+        });
+
     }
 }

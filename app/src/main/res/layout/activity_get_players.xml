@@ -69,9 +69,10 @@
         android:layout_height="28dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="56dp"
-        android:text="Switch"
+        android:text="Male"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sbLevel" />
+        app:layout_constraintTop_toBottomOf="@+id/sbLevel"
+        tools:text="@string/lbGenderMale" />
 
     <TextView
         android:id="@+id/txtSbProgress"
