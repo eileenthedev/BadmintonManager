@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".GetPlayersActivity">
 
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <TextView
         android:id="@+id/lbName"
         android:layout_width="0dp"
@@ -63,16 +66,17 @@
         app:layout_constraintEnd_toStartOf="@+id/swGender"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Switch
-        android:id="@+id/swGender"
-        android:layout_width="210dp"
-        android:layout_height="28dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="56dp"
-        android:text="Male"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sbLevel"
-        tools:text="@string/lbGenderMale" />
+        <Switch
+            android:id="@+id/swGender"
+            android:layout_width="210dp"
+            android:layout_height="28dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="56dp"
+            android:text="Female"
+            android:textAlignment="viewEnd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sbLevel"
+            tools:text="@string/lbGenderMale" />
 
     <TextView
         android:id="@+id/txtSbProgress"
@@ -110,10 +114,20 @@
         android:id="@+id/btnAddPlayer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="424dp"
+        android:layout_marginTop="376dp"
         android:text="@string/lbAdd"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-</android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+    
+    <android.support.design.widget.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:menu="@menu/navigation_menu"
+        android:layout_gravity="start">
+
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>

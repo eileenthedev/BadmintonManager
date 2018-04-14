@@ -8,4 +8,5 @@
     <string name="lbGenderMale">Male</string>
     <string name="lbGenderFemale">Female</string>
     <string name="lbAdd">Add New Player</string>
+    <string name="title_activity_list_player">ListPlayerActivity</string>
 </resources>
