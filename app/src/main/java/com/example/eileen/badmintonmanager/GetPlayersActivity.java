@@ -31,6 +31,7 @@ public class GetPlayersActivity extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
     private Toolbar mToolbar;
+    private BadmintonManagerDbHelper mDbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -119,7 +120,7 @@ public class GetPlayersActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //saveNewPlayer();
-                BadmintonManagerDbHelper mDbHelper = new BadmintonManagerDbHelper(v.getContext());
+                mDbHelper = new BadmintonManagerDbHelper(v.getContext());
                 mDbHelper.saveNewProfile(v.getContext(), txtName.getText().toString(), sbLevel.getProgress(), swGender.getText().toString());
             }
         });
@@ -141,10 +142,14 @@ public class GetPlayersActivity extends AppCompatActivity {
             Intent activity_about = new Intent(this, ListPlayerActivity.class);
             startActivity(activity_about);
         }
-
-
         //mDrawerLayout.closeDrawer(GravityCompat.START);
         return true;
 
+    }
+
+    @Override
+    protected void onDestroy() {
+        mDbHelper.close();
+        super.onDestroy();
     }
 }
