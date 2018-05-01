@@ -1,5 +1,6 @@
 package BadmintonManagerDAL;
 
+import android.net.Uri;
 import android.provider.BaseColumns;
 
 public final class BadmintonManagerContract {
@@ -12,6 +13,5 @@ public final class BadmintonManagerContract {
         public static final String COLUMN_NAME_PLAYER_NAME = "Name";
         public static final String COLUMN_NAME_PLAYER_LEVEL = "Level";
         public static final String COLUMN_NAME_PLAYER_GENDER = "Gender";
-
     }
 }

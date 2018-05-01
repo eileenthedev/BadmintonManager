@@ -39,6 +39,10 @@ public class BadmintonManagerDbHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    public SQLiteDatabase getReadableProfileDb(){
+        return getReadableDatabase();
+    }
+
     public void saveNewProfile(Context context, String playerName, int playerLevel, String playerGender){
         BadmintonManagerDbHelper mDbHelper = new BadmintonManagerDbHelper(context);
         // Gets the data repository in write mode
